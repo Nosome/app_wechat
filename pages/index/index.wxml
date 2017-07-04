@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="search-box">
+  <view class="sview search-kind">
+    分类
+  </view>
+  <view class="sview search-input">
+    <input placeholder="请输入要搜索的内容" class="sinput" />
+  </view>
+  <view class="sview search-btn">
+    <button class="sbtn">搜索</button>
+  </view>
+</view>
+<navigator url="../logs/logs">log</navigator>

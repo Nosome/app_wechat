@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/article/article"
+  ],
+  "tabBar": {
+    "color": "#858585",
+    "selectedColor": "#1d96f4",
+    "borderStyle": "black",
+    "backgroundColor": "#f2f2f2",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/article/article",
+        "iconPath": "images/note.png",
+        "selectedIconPath": "images/note-active.png",
+        "text": "随笔"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine-active.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1d96f4",
+    "navigationBarTitleText": "随心记",
+    "navigationBarTextStyle": "white"
+  }
+}
