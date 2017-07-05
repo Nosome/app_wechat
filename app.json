@@ -36,5 +36,8 @@
     "navigationBarBackgroundColor": "#1d96f4",
     "navigationBarTitleText": "随心记",
     "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 10000
   }
 }

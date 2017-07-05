@@ -1,13 +1,30 @@
 <!--index.wxml-->
 <view class="search-box">
-  <view class="sview search-kind">
-    分类
+  <view class="sview search-kind" catchtap="triggerSelect">
+    {{selectedKind}} <image src="../../images/arrowright.png" class="sview-icon"></image>
+  </view>
+  <view class="select-view" hidden="{{kindHidden}}">
+    <view class="select-item" catchtap="seleteKindFn" data-kind="分类1">分类1</view>
+    <view class="select-item" catchtap="seleteKindFn" data-kind="分类2">分类2</view>
+    <view class="select-item" catchtap="seleteKindFn" data-kind="分类3">分类3</view>
   </view>
   <view class="sview search-input">
-    <input placeholder="请输入要搜索的内容" class="sinput" />
+    <input placeholder-style="color:#ccc; text-indent:40rpx; background:url(../../images/search.png) no-repeat left center; background-size:auto 70%;" placeholder="请输入要搜索的内容" class="sinput" />
   </view>
   <view class="sview search-btn">
-    <button class="sbtn">搜索</button>
+    <button class="sbtn" catchtap="handleSearch">搜索</button>
   </view>
 </view>
-<navigator url="../logs/logs">log</navigator>
+<view class="main-list">
+  <view class="list-item" wx:for="{{indexList}}" wx:key="{{index}}">
+    <view class="item-kind">
+      [{{item.kind}}]
+    </view>
+    <view class="item-title">
+      <navigator url="{{item.url}}">{{item.title}}</navigator>
+    </view>
+    <view class="item-date">
+      [{{item.date}}]
+    </view>
+  </view>
+</view>

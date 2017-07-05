@@ -5,7 +5,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    kindHidden: true,
+    selectedKind: '分类',
+    indexList:[
+      {
+        url: '../logs/logs',
+        kind: '分类1',
+        title: '标题1',
+        date: '2017/01/01'
+      }, {
+        url: '../logs/logs',
+        kind: '分类2',
+        title: '标题2',
+        date: '2017/02/02'
+      }, {
+        url: '../logs/logs',
+        kind: '分类3',
+        title: '标题3',
+        date: '2017/03/03'
+      }
+    ]
+  },
+  triggerSelect: function(){
+    var flag = this.data.kindHidden;
+    if(flag == true){
+      this.setData({
+        kindHidden: false
+      })
+    }else{
+      this.setData({
+        kindHidden: true
+      })
+    }
+  },
+  seleteKindFn: function(e){
+    var kindName = e.target.dataset.kind;
+    this.setData({
+      kindHidden: true,
+      selectedKind: kindName
+    })
+  },
+  // 搜索事件
+  handleSearch: function(){
+    console.log('test');
   },
 
   /**
